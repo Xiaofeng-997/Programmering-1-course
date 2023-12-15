@@ -29,6 +29,7 @@ print(list_nested[0][2])#här skriver man ut det sist elementet från första li
 
 #Skapa en lista med heltal
 list_numbers = [1,2,3,4,5,6,7,8,9,10]
-list_numbers.pop()
 list_numbers.pop(3)
+last_element = list_numbers.pop()
 print(list_numbers)
+print(last_element)
