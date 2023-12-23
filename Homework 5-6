@@ -1,0 +1,30 @@
+
+
+#To remove all vowels in string
+#först definerar jag en variabel som innehåller alla vokaler
+vokaler = "aeiouyåäöAEIOUYÅÄÖ"
+
+#här kopplar jag inmatning till en ny variabel
+str = input("hur går det:")
+
+#använder en for-loop för att kontrollera vokaler i str
+for x in str: #loopar igenom varje tecken i str
+    if x in vokaler:#jämföra x som finns i variabel vokaler
+        str = str.replace(x,"") #ersätt tecknet som matchar x
+
+print(str)
+
+""" med tre "eller ' kan man skriver flera rad i ett kommentar
+här nere gjorde jag med list istället.
+
+list = ["a" , "e" , "i" , "o" , "u " , "y" , "å" , "ä" , "ö" , "A" , "E" , "I" , "O" , "U " , "Y" , "Å" , "Ä" , "Ö"]
+
+print("skriver vad du vill så kommer jag ta bort alla vokaler från det du har skrivit.")
+
+str1 = input("skriver: ")
+for b in str1:
+    if b in list:
+        str1 = str1.replace(x, "")
+
+print(str1)
+"""
