@@ -1,5 +1,5 @@
 
-#Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla tecken är inverterade.
+######Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla tecken är inverterade.######
 
 #Genom indexering kan man gör att alla tecken i string blir inverterade
 input_str = "Hej världen!"
@@ -20,7 +20,7 @@ print(reversed_str2)
 
 
 
-#Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla vokaler är borttagna
+######Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla vokaler är borttagna######
 
 #Tilldela variabel som innehåller alla vokaler
 vokaler = "aeiouyåäöAEIOUYÅÄÖ"
@@ -50,10 +50,11 @@ for b in meningen_2:
         meningen_2 = meningen_2.replace(b, "")
 
 print(meningen_2)
- 
 
 
-#Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla mellanslag är ersatt med en specifik karaktär.
+
+
+######Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla mellanslag är ersatt med en specifik karaktär.######
 
 #Byta ut alla mellanslag genom .replace() metod
 andra_text = "Hej världen!"
