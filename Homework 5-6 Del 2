@@ -1,0 +1,66 @@
+
+#Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla tecken är inverterade.
+
+#Genom indexering kan man gör att alla tecken i string blir inverterade
+input_str = "Hej världen!"
+reversed_str = input_str[::-1]
+print(reversed_str)
+
+
+#Tilldela en tomt variabel för inverterade sträng
+reversed_str2 = ""
+#Genom for-loop gör alla tecken blir inverterade
+for char in input_str:
+    reversed_str2 = char + reversed_str2 #
+
+print(reversed_str2)
+
+
+
+
+
+
+#Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla vokaler är borttagna
+
+#Tilldela variabel som innehåller alla vokaler
+vokaler = "aeiouyåäöAEIOUYÅÄÖ"
+
+#Variabel som ta emot input
+meningen = input("hur går det:")
+
+#använder en for-loop för att kontrollera vokaler i variabel "meningen"
+for x in meningen: #loopar igenom varje tecken i "meningen"
+    if x in vokaler: #jämföra x med variabel "vokaler"
+        meningen = meningen.replace(x,"") #ersätt tecknet som matchar med variabel "vokaler"
+
+print(meningen)
+
+# med tre "eller ' kan man skriver flera rad i ett kommentar
+# här nere gjorde jag med list istället.
+
+vokaler_list = ["a" , "e" , "i" , "o" , "u " , "y" , "å" , "ä" , "ö" , "A" , "E" , "I" , "O" , "U " , "Y" , "Å" , "Ä" , "Ö"]
+
+print("skriver vad du vill så kommer jag ta bort alla vokaler från det du har skrivit.")
+
+meningen_2 = input("skriver: ")
+
+
+for b in meningen_2:
+    if b in vokaler_list:
+        meningen_2 = meningen_2.replace(b, "")
+
+print(meningen_2)
+ 
+
+
+#Uppgiften: Skapa en funktion som tar en sträng som input och returnerar en ny sträng där alla mellanslag är ersatt med en specifik karaktär.
+
+#Byta ut alla mellanslag genom .replace() metod
+andra_text = "Hej världen!"
+print(andra_text.replace(" ","_"))
+
+#Byta ut alla mellanslag genom .split() coh join() metoder
+#OBS ska har extra koll på separator när man använder .split()
+text = "Hej världen! Jag är tillbaka"
+text = text.split()
+print("_".join(text)) 
