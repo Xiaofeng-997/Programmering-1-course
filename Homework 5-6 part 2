@@ -1,6 +1,6 @@
-#Övningsuppgifter
+#######Övningsuppgifter######
 
-#Uppgiften Skapa en sträng
+######Uppgiften Skapa en sträng######
 greeting = "Hello world!"
 
 #Uppgiften Strängindexering
@@ -11,14 +11,14 @@ total_tokens = greeting[0]+" "+greeting[-1]
 print("den första tecken är {}, och den sista tecken är {}.".format(first_token, last_token))
 print(f"den första tecken är {total_tokens}, och den sista tecken är {last_token}.")
 
-#Uppgiften Substring
+#######Uppgiften Substring######
 #Genom att använda stringindexering kan man smidigt skapa en substring från en sträng.
 
 string_slicing = greeting[-6:-1] # Här tilldelar jag den slicade strängen till en ny variabel för att möjliggöra återanvändning.
 print(string_slicing)
 print(greeting[-6:-1]) #Det här sättet kommer inte att påverka variabeln 'greeting'.
 
-#Uppgiften Ända Stora och Små bokstäver
+######Uppgiften Ända Stora och Små bokstäver######
 
 Uppercase = greeting.upper() #Metoden "upper()" konverterar hela strängen till versaler
 print(Uppercase)
@@ -26,9 +26,31 @@ print(Uppercase)
 Lowercase = greeting.lower() #Metoden "lower()" konverterar hela strängen till gemener
 print(Lowercase)
 
-#String Concatenation
+######Uppgiften: String Concatenation######
 name = "Xiaofeng"
 print(name + " " + greeting) #Här har jag använt en string addition
 print("Hello "+ name +', Välkommer! Här kan du börja skriva ditt första program "'+ greeting+'"')
-print(f'Hello {name}. Här kan du börja skriva ditt första program "{greeting}"')
+print(f'Hello {name}. Här kan du börja skriva ditt första program "{greeting}"') # f-string kan man infoga variabel med {}
 
+######Uppgiften Interpolering######
+
+username = input("Skriver ner ditt namn: ")
+halsningsfras = "Hej och varmt välkommer {}" #Tilldela en variabel med hälsningsfras och {}, för att det skulle kunna använda metod "format()"
+print(halsningsfras.format(username.capitalize())) #metoden "Capitalize()" konverterar första bokstav till versal
+
+#Uppgiften Förekomst av Substring
+
+#Sträng metod count() räkna antalet gånger ett angivet värde förekommer i en sträng
+print(greeting.count("l")) # "Count()" Obs, det får inte lämmna tomt eller ett siffran i paratens. det måste ha en sträng med citattecken
+
+
+######Uppgiften Split och Join######
+
+split_string = greeting.split() #Split() metod dela upp en sträng i en list där varje ord är ett listelement
+join_string = "! ".join(split_string)
+join_string_2 = "!".join(greeting)
+
+#OBS join() metod ger olika resultat på sträng och list
+print(split_string)
+print(join_string) #Join() metod på en list gör att separerar varje listelement
+print(join_string_2) #Join() metod på en sträng gör att separerar varje tecken
