@@ -1,0 +1,88 @@
+
+import time
+import math
+# Math-modul behövs för att använda pi för att beräkna volym och yta
+
+
+
+# Grundläggande Aritmetiska Operationer
+
+tal_1 = 25
+tal_2 = 5
+
+print(tal_1+tal_2) # Addition
+
+print(tal_1-tal_2) # Subtraktion
+
+print(tal_1*tal_2) # Multiplikation
+
+print(tal_1/tal_2) # Division
+
+# Jämförelseoperatörer
+
+print(tal_1 > 20)
+print(tal_1 == 20)
+print(tal_1 < 20)
+
+# Logiska operatorer
+def logiska_1():
+    if 2*5 == 10 and 11-1 == 10: # Denna if-sats kommer att köras endast om båda villkoren är sanna
+        return True
+    
+def logiska_2():   
+    if 2 < 3 or 4 > 5: # Den köras när en av villkoren är san
+        return True
+    
+def logiska_3():
+    if not False: # Den köras när ingen villkoren är san
+        return True
+
+print(logiska_1(),logiska_2(),logiska_3())
+
+
+# Time Modul
+
+# För att använda 'time.time(), time.sleep()', import time modul behövs    
+tid = time.time() # Den få fram tid som räknas sedan epoken
+print(tid)
+
+time.sleep(5) # Den pausa exekvering i 5 sekunder
+
+tid_5s = time.time()
+print(tid_5s)
+    
+
+
+# Volymom och Yta av sfär
+    
+def volym_yta_klot(r):
+
+    p = math.pi # Tilldela pi till en variabel
+    result_volym_sf = (4*p*r**3)/3
+    result_volym_sf = round(result_volym_sf,3) # Avrunda till 3 decimal
+    result_yta_sf = 4*p*r**2
+    result_yta_sf = round(result_yta_sf,3)
+
+    return result_volym_sf,result_yta_sf #returnera svar
+
+radius = float(input('Ange r till sfär: ')) # OBS behöver definiera User input type
+volym_result,yta_result = volym_yta_klot(radius) # Tilldela samman värde till två olika variabler
+print('volym av sfär är ',volym_result)
+print('volym av sfär är ',yta_result)
+
+# Volym och Yta av cylinder
+def volym_yta_cylinder(h,r):
+    p = math.pi
+    volym_cylinder = h*p*r**2
+    volym_cylinder = round(volym_cylinder,3)
+
+    yta_cylinder = 2*p*r*(r+h)
+    yta_cylinder = round(yta_cylinder,3)
+
+    return volym_cylinder, yta_cylinder
+
+high = float(input('Ange höjd av cylinder: '))
+radius_cylinder = float(input('Ange radius av cylinder: '))
+result_volym_cylind,result_yta_cylind = volym_yta_cylinder(high,radius_cylinder) # importera parametrar till funktionen
+print('volym av cylind är ',result_volym_cylind)
+print('yta av cylind är ',result_yta_cylind)
